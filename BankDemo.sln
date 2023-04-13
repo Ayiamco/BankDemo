@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BE", "BE", "{7A7AC613-CA75-453E-A46B-25C8556CE20F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FE", "FE", "{FBCF32E3-80F7-47F8-B232-92FA6DACC408}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{37FC7973-53AE-4257-A1BD-45065FA5550E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9B28DB4F-74AB-41E5-AAF0-FE75216EA0E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankDemo.Api", "BE\src\BankDemo.Api\BankDemo.Api.csproj", "{5CF7E368-4829-4E7F-B749-BCE3B23C22C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CF7E368-4829-4E7F-B749-BCE3B23C22C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF7E368-4829-4E7F-B749-BCE3B23C22C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF7E368-4829-4E7F-B749-BCE3B23C22C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF7E368-4829-4E7F-B749-BCE3B23C22C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{37FC7973-53AE-4257-A1BD-45065FA5550E} = {7A7AC613-CA75-453E-A46B-25C8556CE20F}
+		{9B28DB4F-74AB-41E5-AAF0-FE75216EA0E6} = {7A7AC613-CA75-453E-A46B-25C8556CE20F}
+		{5CF7E368-4829-4E7F-B749-BCE3B23C22C1} = {37FC7973-53AE-4257-A1BD-45065FA5550E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0889C37B-FEDC-4B2C-8FF9-EFFAC84B9E70}
+	EndGlobalSection
+EndGlobal
