@@ -3,8 +3,10 @@
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0-focal AS build
 WORKDIR /src
-COPY . .
+RUN ls
+COPY "\\wsl.localhost\Ubuntu-22.04\home\jachonu\projects\BankDemo\BE\src\BankDemo.Api" .
 RUN pwd
+RUN ls
 RUN dotnet restore "\\wsl.localhost\Ubuntu-22.04\home\jachonu\projects\BankDemo\BE\src\BankDemo.Api\BankDemo.Api.csproj"  --disable-parallel
 RUN dotnet publish "\\wsl.localhost\Ubuntu-22.04\home\jachonu\projects\BankDemo\BE\src\BankDemo.Api\BankDemo.Api.csproj" -c Release -o /app --no-restore
 
