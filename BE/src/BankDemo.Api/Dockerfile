@@ -4,7 +4,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:6.0-focal AS build
 WORKDIR /src
 RUN ls
-COPY "\\wsl.localhost\Ubuntu-22.04\home\jachonu\projects\BankDemo\BE\src\BankDemo.Api" .
+COPY "BankDemo.Api" .
 RUN pwd
 RUN ls
 RUN dotnet restore "\\wsl.localhost\Ubuntu-22.04\home\jachonu\projects\BankDemo\BE\src\BankDemo.Api\BankDemo.Api.csproj"  --disable-parallel
