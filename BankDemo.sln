@@ -11,7 +11,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{37FC7973-53A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9B28DB4F-74AB-41E5-AAF0-FE75216EA0E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankDemo.Api", "BE\src\BankDemo.Api\BankDemo.Api.csproj", "{5CF7E368-4829-4E7F-B749-BCE3B23C22C1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BankDemo.Api", "BankDemo.Api", "{9CCE4738-4E8A-4CA9-B792-C53EE331953E}"
+	ProjectSection(SolutionItems) = preProject
+		BE\src\BankDemo.Api\Dockerfile = BE\src\BankDemo.Api\Dockerfile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code", "Code", "{FB3A72A1-CE0B-4FDC-AB7D-3AAA126FDA86}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankDemo.Api", "BE\src\BankDemo.Api\Code\BankDemo.Api.csproj", "{A99A1E0A-3314-427F-BFA5-24AC2C5B7567}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InterBankSettlement.Api", "InterBankSettlement.Api", "{E58E403D-DC92-401B-B4D4-80D92D14EBB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterBankSettlement.Api", "BE\src\InterBankSettlement.Api\Code\InterBankSettlement.Api\InterBankSettlement.Api.csproj", "{E381ECB0-75A0-4FA1-8B34-5E422A452DB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +30,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5CF7E368-4829-4E7F-B749-BCE3B23C22C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5CF7E368-4829-4E7F-B749-BCE3B23C22C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5CF7E368-4829-4E7F-B749-BCE3B23C22C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5CF7E368-4829-4E7F-B749-BCE3B23C22C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A99A1E0A-3314-427F-BFA5-24AC2C5B7567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A99A1E0A-3314-427F-BFA5-24AC2C5B7567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A99A1E0A-3314-427F-BFA5-24AC2C5B7567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A99A1E0A-3314-427F-BFA5-24AC2C5B7567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E381ECB0-75A0-4FA1-8B34-5E422A452DB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E381ECB0-75A0-4FA1-8B34-5E422A452DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E381ECB0-75A0-4FA1-8B34-5E422A452DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E381ECB0-75A0-4FA1-8B34-5E422A452DB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,7 +45,11 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{37FC7973-53AE-4257-A1BD-45065FA5550E} = {7A7AC613-CA75-453E-A46B-25C8556CE20F}
 		{9B28DB4F-74AB-41E5-AAF0-FE75216EA0E6} = {7A7AC613-CA75-453E-A46B-25C8556CE20F}
-		{5CF7E368-4829-4E7F-B749-BCE3B23C22C1} = {37FC7973-53AE-4257-A1BD-45065FA5550E}
+		{9CCE4738-4E8A-4CA9-B792-C53EE331953E} = {37FC7973-53AE-4257-A1BD-45065FA5550E}
+		{FB3A72A1-CE0B-4FDC-AB7D-3AAA126FDA86} = {9CCE4738-4E8A-4CA9-B792-C53EE331953E}
+		{A99A1E0A-3314-427F-BFA5-24AC2C5B7567} = {FB3A72A1-CE0B-4FDC-AB7D-3AAA126FDA86}
+		{E58E403D-DC92-401B-B4D4-80D92D14EBB7} = {37FC7973-53AE-4257-A1BD-45065FA5550E}
+		{E381ECB0-75A0-4FA1-8B34-5E422A452DB5} = {E58E403D-DC92-401B-B4D4-80D92D14EBB7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0889C37B-FEDC-4B2C-8FF9-EFFAC84B9E70}
