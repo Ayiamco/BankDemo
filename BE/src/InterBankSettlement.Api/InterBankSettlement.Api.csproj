@@ -16,7 +16,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\DapperBaseRepo\src\Dapper.BaseRepository.csproj" />
     <ProjectReference Include="..\Shared\BankDemo.Infrastructure\BankDemo.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\" />
+    <Folder Include="Data\Repositories\Interfaces\" />
+    <Folder Include="Queries\" />
   </ItemGroup>
 
 </Project>

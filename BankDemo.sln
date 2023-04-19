@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{CFEF5D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankDemo.Infrastructure", "BE\src\Shared\BankDemo.Infrastructure\BankDemo.Infrastructure.csproj", "{3CBE19C2-8B28-4299-8083-1E642886118A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dapper.BaseRepository", "..\DapperBaseRepo\src\Dapper.BaseRepository.csproj", "{A35A061C-5B3D-4E45-9922-A5F5DA325B62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{3CBE19C2-8B28-4299-8083-1E642886118A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CBE19C2-8B28-4299-8083-1E642886118A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CBE19C2-8B28-4299-8083-1E642886118A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A35A061C-5B3D-4E45-9922-A5F5DA325B62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A35A061C-5B3D-4E45-9922-A5F5DA325B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A35A061C-5B3D-4E45-9922-A5F5DA325B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A35A061C-5B3D-4E45-9922-A5F5DA325B62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 		{E93E8590-E798-4EB8-927D-E15596AC3F0C} = {E58E403D-DC92-401B-B4D4-80D92D14EBB7}
 		{CFEF5D9B-6250-4567-B1B1-E51194FBC5FB} = {37FC7973-53AE-4257-A1BD-45065FA5550E}
 		{3CBE19C2-8B28-4299-8083-1E642886118A} = {CFEF5D9B-6250-4567-B1B1-E51194FBC5FB}
+		{A35A061C-5B3D-4E45-9922-A5F5DA325B62} = {E58E403D-DC92-401B-B4D4-80D92D14EBB7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0889C37B-FEDC-4B2C-8FF9-EFFAC84B9E70}
