@@ -3,10 +3,9 @@
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0-focal AS build
 WORKDIR /src
-COPY . ./BankDemo
-COPY ../Shared ./Shared
-RUN dotnet restore "BankDemo.Api.csproj"  --disable-parallel
-RUN dotnet publish "BankDemo.Api.csproj" -c Release -o /app --no-restore
+COPY . .
+RUN dotnet restore "./BankDemo/BE/src/BankDemo.Api/BankDemo.Api.csproj"  --disable-parallel
+RUN dotnet publish "./BankDemo/BE/src/BankDemo.Api/BankDemo.Api.csproj" -c Release -o /app --no-restore
 
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
