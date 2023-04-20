@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace InterBankSettlement.Api.Controllers
 {
     [ApiVersion("1.0")]
-    [Route("api/v{v:apiVersion}/Merchant")]
+    [Route("api/v{v:apiVersion}/merchant")]
     public class MerchantController : BaseController
     {
 
@@ -20,7 +20,7 @@ namespace InterBankSettlement.Api.Controllers
         }
 
         [MapToApiVersion("1.0")]
-        [HttpPost(Name = "Register")]
+        [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterMerchant.Command command, CancellationToken cancellation)
         {
             var result = new BaseApiResponse<RegisterMerchant.Response> { };

@@ -21,7 +21,10 @@ namespace BankDemo.Infrastructure.ExtensionMethods
                 setup.GroupNameFormat = "'v'VVV";
                 setup.SubstituteApiVersionInUrl = true;
             });
-            services.AddSwaggerGen();
+            services.AddSwaggerGen(options =>
+            {
+                options.CustomSchemaIds(type => type.ToString());
+            });
             services.ConfigureOptions<SwaggerConfigOptions>();
             return services;
         }
