@@ -8,6 +8,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FE", "FE", "{FBCF32E3-80F7-47F8-B232-92FA6DACC408}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{37FC7973-53AE-4257-A1BD-45065FA5550E}"
+	ProjectSection(SolutionItems) = preProject
+		BE\src\docker-compose.yml = BE\src\docker-compose.yml
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9B28DB4F-74AB-41E5-AAF0-FE75216EA0E6}"
 EndProject

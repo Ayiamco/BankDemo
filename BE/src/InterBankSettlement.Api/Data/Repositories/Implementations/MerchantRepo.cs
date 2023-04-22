@@ -12,11 +12,8 @@ namespace InterBankSettlement.Api.Data.Repositories.Implementations
         public Task<CommandResp> RegisterMerchant(Merchant merchant)
         {
             var sql = $@"
-INSERT INTO Merchants 
-Name = @Name
-BaseUrl = @BaseUrl
-Id = @Id
-UniqueCode =@UniqueCode
+INSERT INTO Merchants ( Name,BaseUrl,Id,UniqueCode)
+VALUES ( @Name,@BaseUrl,@Id,@UniqueCode)
 ";
             return RunCommand(sql, merchant);
         }

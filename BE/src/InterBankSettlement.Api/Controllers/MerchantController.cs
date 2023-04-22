@@ -27,6 +27,7 @@ namespace InterBankSettlement.Api.Controllers
             while (!cancellation.IsCancellationRequested)
             {
                 result = await mediator.Send(command, cancellation);
+                return GetResponse(result);
             }
 
             return GetResponse(result);

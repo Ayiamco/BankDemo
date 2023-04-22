@@ -51,7 +51,16 @@ namespace InterBankSettlement.Api.Commands
                     };
                 }
 
-                return new BaseApiResponse<Response> { Message = "Failed to create merchant.", Result = new Response { UniqueCode = merchant.UniqueCode } };
+                return new BaseApiResponse<Response> { Message = "Failed to create merchant." };
+            }
+        }
+
+        public class RegisterMerchantMapper : Profile
+        {
+            public RegisterMerchantMapper()
+            {
+                CreateMap<Command, Merchant>().
+                    ForMember(dest => dest.Name, src => src.MapFrom(src => src.Name));
             }
         }
     }
