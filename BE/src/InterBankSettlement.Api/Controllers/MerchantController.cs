@@ -1,12 +1,13 @@
 using BankDemo.Infrastructure.Base;
 using InterBankSettlement.Api.Commands;
+using InterBankSettlement.Api.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InterBankSettlement.Api.Controllers
 {
     [ApiVersion("1.0")]
-    [Route("api/v{v:apiVersion}/merchant")]
+    [Route("api/v{v:apiVersion}/merchants")]
     public class MerchantController : BaseController
     {
 
@@ -27,6 +28,20 @@ namespace InterBankSettlement.Api.Controllers
             while (!cancellation.IsCancellationRequested)
             {
                 result = await mediator.Send(command, cancellation);
+                return GetResponse(result);
+            }
+
+            return GetResponse(result);
+        }
+
+        [MapToApiVersion("1.0")]
+        [HttpGet("")]
+        public async Task<IActionResult> GetAll([FromQuery] GetMerchants.Request request, CancellationToken cancellation)
+        {
+            var result = new BaseApiResponse<PagedResponse<GetMerchants.Response>> { };
+            while (!cancellation.IsCancellationRequested)
+            {
+                result = await mediator.Send(request, cancellation);
                 return GetResponse(result);
             }
 

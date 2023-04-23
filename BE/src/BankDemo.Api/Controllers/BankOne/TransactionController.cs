@@ -1,5 +1,6 @@
 using BankDemo.Infrastructure.Base;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace BankDemo.Api.Controllers.BankOne
 {
@@ -19,6 +20,8 @@ namespace BankDemo.Api.Controllers.BankOne
         [HttpPost("credit")]
         public IActionResult Credit()
         {
+            Debug.WriteLine($"Logger:{_logger.GetHashCode()} ");
+            Debug.WriteLine($"Controller:{this.GetHashCode()} ");
             return Ok("we are getting there.");
         }
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using BankDemo.Infrastructure.Config;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -21,6 +22,12 @@ namespace BankDemo.Infrastructure.ExtensionMethods
                 }
             });
 
+            return app;
+        }
+
+        public static IApplicationBuilder UseCustomMiddleWare(this WebApplication app)
+        {
+            app.UseMiddleware<ResponseTimeMiddleware>();
             return app;
         }
     }

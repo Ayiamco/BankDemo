@@ -29,5 +29,6 @@ namespace BankDemo.Infrastructure.ExtensionMethods
             services.ConfigureOptions<SwaggerConfigOptions>();
             return services;
         }
+
     }
 }

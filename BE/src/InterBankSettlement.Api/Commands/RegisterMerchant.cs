@@ -2,7 +2,7 @@
 using BankDemo.Infrastructure.Base;
 using Dapper.BaseRepository.Config;
 using InterBankSettlement.Api.Data.Entities;
-using InterBankSettlement.Api.Data.Repositories.Implementations;
+using InterBankSettlement.Api.Data.Repositories.Interfaces;
 using MediatR;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
