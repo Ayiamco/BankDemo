@@ -20,7 +20,7 @@ namespace BankDemo.Infrastructure.Config
             next(context);
 
             var timeSpent = DateTime.UtcNow - timein;
-            var logMessage = $"Route: {context.Request.Path}; CompletionTime: {timeSpent.TotalMilliseconds}";
+            var logMessage = $"Route: {context.Request.Path}; CompletionTime: {timeSpent.TotalMilliseconds} MilliSeconds";
             Debug.WriteLine(logMessage);
             logger.LogInformation(logMessage);
             return Task.CompletedTask;
