@@ -3,12 +3,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BankDemo.Api.Data.DbContexts
 {
-    public class BankOneContext : DbContext
+    public class BankOneDbContext : DbContext
     {
-        public BankOneContext()
+        public BankOneDbContext(DbContextOptions<BankOneDbContext> dbContext) : base(dbContext)
         {
 
         }
+
 
         public DbSet<Customer> Customers { get; set; }
     }
