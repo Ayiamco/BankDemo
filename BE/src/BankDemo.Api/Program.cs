@@ -1,3 +1,4 @@
+using BankDemo.Api.Data.Configurations;
 using BankDemo.Api.Data.DbContexts;
 using BankDemo.Infrastructure.Config;
 using BankDemo.Infrastructure.ExtensionMethods;
@@ -12,11 +13,12 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddControllers();
 builder.Services.AddSwaggerDoc();
-builder.Services.AddDbContext<BankOneContext>(ctx =>
+builder.Services.AddDbContext<BankOneDbContext>(ctx =>
 {
-    var connectionString = builder.Configuration["BankOneConnectionString"];
+    var connectionString = builder.Configuration["ConnectionStrings:BankOne"];
     ctx.UseSqlServer(connectionString);
 });
+builder.Services.AddHostedService<SeedData>();
 builder.Services.AddScoped<ResponseTimeMiddleware>();
 var app = builder.Build();
 

@@ -8,7 +8,7 @@
 
         public string AccountNumber { get; set; }
 
-        public DateOnly DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
