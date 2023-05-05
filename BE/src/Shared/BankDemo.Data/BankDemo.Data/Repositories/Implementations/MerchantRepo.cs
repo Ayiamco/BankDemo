@@ -1,12 +1,11 @@
-﻿using BankDemo.Infrastructure.Base;
+﻿using BankDemo.Data.Entities;
+using BankDemo.Data.Models;
+using BankDemo.Data.Repositories.Interfaces;
 using Dapper.BaseRepository.Components;
 using Dapper.BaseRepository.Config;
 using Dapper.Repository.interfaces;
-using InterBankSettlement.Api.Data.Entities;
-using InterBankSettlement.Api.Data.Repositories.Interfaces;
-using InterBankSettlement.Api.Queries;
 
-namespace InterBankSettlement.Api.Data.Repositories.Implementations
+namespace BankDemo.Data.Repositories.Implementations
 {
     public class MerchantRepo : BaseRepository<MerchantRepo, IRepositoryLogger<MerchantRepo>>, IMerchantRepo
     {
@@ -21,7 +20,7 @@ VALUES ( @Name,@BaseUrl,@Id,@UniqueCode)
             return RunCommand(sql, merchant);
         }
 
-        public async Task<(IEnumerable<GetMerchants.Response>, int?)> GetMerchants(PagedRequest request)
+        public async Task<(IEnumerable<Merchant>, int?)> GetMerchants(PagedRequest request)
         {
             var sql = @"
 SELECT UniqueCode,Name 
@@ -30,7 +29,7 @@ ORDER BY Name
 ";
             sql = AddPagination(sql);
 
-            var result = await RunQuery<GetMerchants.Response>(sql, request);
+            var result = await RunQuery<Merchant>(sql, request);
 
             if (!result.Any()) return (result, 0);
 

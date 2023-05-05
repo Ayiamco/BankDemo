@@ -30,13 +30,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Shared\BankDemo.Data\BankDemo.Data\BankDemo.Data.csproj" />
     <ProjectReference Include="..\Shared\BankDemo.Infrastructure\BankDemo.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="BankOneCustomers.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <Folder Include="Commands\" />
   </ItemGroup>
 
 </Project>

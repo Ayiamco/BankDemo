@@ -1,9 +1,9 @@
+using BankDemo.Data.Repositories.Implementations;
+using BankDemo.Data.Repositories.Interfaces;
 using BankDemo.Infrastructure.Config;
 using BankDemo.Infrastructure.ExtensionMethods;
 using Dapper.BaseRepository.Config;
 using Dapper.Repository.interfaces;
-using InterBankSettlement.Api.Data.Repositories.Implementations;
-using InterBankSettlement.Api.Data.Repositories.Interfaces;
 using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);

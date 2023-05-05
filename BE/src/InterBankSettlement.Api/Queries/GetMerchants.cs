@@ -1,5 +1,7 @@
-﻿using BankDemo.Infrastructure.Base;
-using InterBankSettlement.Api.Data.Repositories.Interfaces;
+﻿using AutoMapper;
+using BankDemo.Data.Models;
+using BankDemo.Data.Repositories.Interfaces;
+using BankDemo.Infrastructure.Base;
 using MediatR;
 
 namespace InterBankSettlement.Api.Queries
@@ -20,10 +22,12 @@ namespace InterBankSettlement.Api.Queries
         public class Handler : IRequestHandler<Request, BaseApiResponse<PagedResponse<Response>>>
         {
             private readonly IMerchantRepo merchantRepo;
+            private readonly IMapper mapper;
 
-            public Handler(IMerchantRepo merchantRepo)
+            public Handler(IMerchantRepo merchantRepo, IMapper mapper)
             {
                 this.merchantRepo = merchantRepo;
+                this.mapper = mapper;
             }
 
             public async Task<BaseApiResponse<PagedResponse<Response>>> Handle(Request request, CancellationToken cancellationToken)
@@ -35,7 +39,7 @@ namespace InterBankSettlement.Api.Queries
                     {
                         ErrorMessage = string.Empty,
                         StatusCode = System.Net.HttpStatusCode.OK,
-                        Result = new PagedResponse<Response>(result.Items, result.Count ?? 0, request.Page, request.PageSize)
+                        Result = new PagedResponse<Response>(mapper.Map<IEnumerable<Response>>(result.Items), result.Count ?? 0, request.Page, request.PageSize)
                     };
                 }
                 return new BaseApiResponse<PagedResponse<Response>>();

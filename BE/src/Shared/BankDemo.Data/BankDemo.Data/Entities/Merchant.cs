@@ -1,4 +1,4 @@
-﻿namespace InterBankSettlement.Api.Data.Entities
+﻿namespace BankDemo.Data.Entities
 {
     public class Merchant
     {

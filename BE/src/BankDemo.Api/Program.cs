@@ -1,5 +1,5 @@
-using BankDemo.Api.Data.Configurations;
-using BankDemo.Api.Data.DbContexts;
+using BankDemo.Api.Data;
+using BankDemo.Data.DbContexts;
 using BankDemo.Infrastructure.Config;
 using BankDemo.Infrastructure.ExtensionMethods;
 using MediatR;

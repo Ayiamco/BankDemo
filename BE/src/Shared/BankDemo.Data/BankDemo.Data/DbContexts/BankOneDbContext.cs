@@ -1,7 +1,7 @@
-﻿using BankDemo.Api.Data.Entities;
+﻿using BankDemo.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace BankDemo.Api.Data.DbContexts
+namespace BankDemo.Data.DbContexts
 {
     public class BankOneDbContext : DbContext
     {

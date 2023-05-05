@@ -1,4 +1,4 @@
-﻿namespace BankDemo.Api.Data.Entities
+﻿namespace BankDemo.Data.Entities
 {
     public class Customer
     {

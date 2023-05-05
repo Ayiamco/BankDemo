@@ -1,3 +1,4 @@
+using BankDemo.Data.Models;
 using BankDemo.Infrastructure.Base;
 using InterBankSettlement.Api.Commands;
 using InterBankSettlement.Api.Queries;
@@ -30,7 +31,6 @@ namespace InterBankSettlement.Api.Controllers
                 result = await mediator.Send(command, cancellation);
                 return GetResponse(result);
             }
-
             return GetResponse(result);
         }
 

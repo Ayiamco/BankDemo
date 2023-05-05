@@ -1,10 +1,10 @@
-﻿using BankDemo.Api.Data.DbContexts;
-using BankDemo.Api.Data.Entities;
+﻿using BankDemo.Data.DbContexts;
+using BankDemo.Data.Entities;
 using CsvHelper;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 
-namespace BankDemo.Api.Data.Configurations
+namespace BankDemo.Api.Data
 {
     public class SeedData : IHostedService
     {
@@ -21,7 +21,7 @@ namespace BankDemo.Api.Data.Configurations
         public async Task StartAsync(CancellationToken cancellationToken)
         {
             //Run Migrations
-            await dbcontext.Database.MigrateAsync();
+            await dbcontext.Database.MigrateAsync(cancellationToken);
 
             if (dbcontext.Customers.Any())
                 return;
@@ -30,8 +30,8 @@ namespace BankDemo.Api.Data.Configurations
             using var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
             var entities = csv.GetRecords<Customer>().ToList();
 
-            await dbcontext.Customers.AddRangeAsync(entities);
-            await dbcontext.SaveChangesAsync();
+            await dbcontext.Customers.AddRangeAsync(entities, cancellationToken);
+            await dbcontext.SaveChangesAsync(cancellationToken);
         }
 
         public Task StopAsync(CancellationToken cancellationToken)

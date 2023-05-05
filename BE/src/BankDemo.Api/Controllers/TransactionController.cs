@@ -1,13 +1,13 @@
-﻿using BankDemo.Infrastructure.Base;
+using BankDemo.Infrastructure.Base;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
-namespace BankDemo.Api.Controllers.BankTwo
+namespace BankDemo.Api.Controllers
 {
-    [ApiVersion("2.0")]
-    [Route("api/v{v:apiVersion}/transaction")]
+    [ApiVersion("1.0")]
+    [Route("api/transaction")]
     public class TransactionController : BaseController
     {
-
 
         private readonly ILogger<TransactionController> _logger;
 
@@ -16,15 +16,15 @@ namespace BankDemo.Api.Controllers.BankTwo
             _logger = logger;
         }
 
-        [MapToApiVersion("2.0")]
         [HttpPost("credit")]
         public IActionResult Credit()
         {
+            Debug.WriteLine($"Logger:{_logger.GetHashCode()} ");
+            Debug.WriteLine($"Controller:{GetHashCode()} ");
             return Ok("we are getting there.");
         }
 
 
-        [MapToApiVersion("2.0")]
         [HttpPost("debit")]
         public IActionResult Debit()
         {

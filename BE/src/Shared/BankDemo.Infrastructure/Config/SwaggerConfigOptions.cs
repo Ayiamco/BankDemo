@@ -39,7 +39,7 @@ namespace BankDemo.Infrastructure.Config
         {
             var info = new OpenApiInfo()
             {
-                Title = config["SwaggerTitle"],
+                Title = config["SwaggerTitle"] + description.ApiVersion.ToString(),
                 Version = description.ApiVersion.ToString()
             };
 
